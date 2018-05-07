@@ -1,0 +1,96 @@
+Shared Memory size is 11 max and debug with gdb.
+
+gdb Multithreading 
+
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from Multithreading...done.
+(gdb) r
+Starting program: /home/sandeep/CPP_11_docs/Multithreading_assignment/MultiThreading/bin/Multithreading 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff6f4e700 (LWP 14646)]
+[New Thread 0x7ffff674d700 (LWP 14647)]
+Thread Name: W1 ,  i = 0 , threadID = 1
+Thread Name: W1 ,  i = 1 , threadID = 1
+Thread Name: W1 ,  i = 2 , threadID = 1
+Thread Name: W1 ,  i = 3 , threadID = 1
+Thread Name: W1 ,  i = 4 , threadID = 1
+Thread Name: W1 ,  i = 5 , threadID = 1
+Thread Name: W1 ,  i = 6 , threadID = 1
+Thread Name: W1 ,  i = 7 , threadID = 1
+Thread Name: W1 ,  i = 8 , threadID = 1
+Thread Name: W1 ,  i = 9 , threadID = 1
+Thread Name: W1 ,  i = 10 , threadID = 1
+[New Thread 0x7ffff5f4c700 (LWP 14648)]
+Success = 11
+Fail = 0
+Thread Name: W2 ,  i = 0 , threadID = 2
+Thread Name: W2 ,  i = 1 , threadID = 2
+Thread Name: W2 ,  i = 2 , threadID = 2
+Thread Name: W2 ,  i = 3 , threadID = 2
+Thread Name: W2 ,  i = 4 , threadID = 2
+Thread Name: W2 ,  i = 5 , threadID = 2
+Thread Name: W2 ,  i = 6 , threadID = 2
+Thread Name: W2 ,  i = 7 , threadID = 2
+Thread Name: W2 ,  i = 8 , threadID = 2
+Thread Name: W2 ,  i = 9 , threadID = 2
+Thread Name: W2 ,  i = 10 , threadID = 2
+Success = 11
+Fail = 0
+[Thread 0x7ffff5f4c700 (LWP 14648) exited]
+[Thread 0x7ffff674d700 (LWP 14647) exited]
+[New Thread 0x7ffff674d700 (LWP 14649)]
+Thread Name: W3 ,  i = 0 , threadID = 3
+Thread Name: W3 ,  i = 1 , threadID = 3
+Thread Name: W3 ,  i = 2 , threadID = 3
+Thread Name: W3 ,  i = 3 , threadID = 3
+Thread Name: W3 ,  i = 4 , threadID = 3
+Thread Name: W3 ,  i = 5 , threadID = 3
+Thread Name: W3 ,  i = 6 , threadID = 3
+Thread Name: W3 ,  i = 7 , threadID = 3
+Thread Name: W3 ,  i = 8 , threadID = 3
+Thread Name: W3 ,  i = 9 , threadID = 3
+Thread Name: W3 ,  i = 10 , threadID = 3
+Success = 11
+Fail = 0
+[New Thread 0x7ffff5f4c700 (LWP 14650)]
+[Thread 0x7ffff674d700 (LWP 14649) exited]
+Thread Name: W4 ,  i = 0 , threadID = 4
+Thread Name: W4 ,  i = 1 , threadID = 4
+Thread Name: W4 ,  i = 2 , threadID = 4
+Thread Name: W4 ,  i = 3 , threadID = 4
+Thread Name: W4 ,  i = 4 , threadID = 4
+Thread Name: W4 ,  i = 5 , threadID = 4
+Thread Name: W4 ,  i = 6 , threadID = 4
+Thread Name: W4 ,  i = 7 , threadID = 4
+Thread Name: W4 ,  i = 8 , threadID = 4
+Thread Name: W4 ,  i = 9 , threadID = 4
+Thread Name: W4 ,  i = 10 , threadID = 4
+Success = 11
+Fail = 0
+[Thread 0x7ffff5f4c700 (LWP 14650) exited]
+[Thread 0x7ffff6f4e700 (LWP 14646) exited]
+^X^Z
+Thread 1 "Multithreading" received signal SIGTSTP, Stopped (user).
+main () at src/main.cpp:23
+23	    while (1)
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 14642] will be killed.
+
+Quit anyway? (y or n) y
+

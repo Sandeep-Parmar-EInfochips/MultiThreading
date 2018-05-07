@@ -1,0 +1,89 @@
+Shared Memory size is 11 max and tested with valgrind.
+
+
+valgrind ./Multithreading --leak-check=full
+
+
+==14570== Memcheck, a memory error detector
+==14570== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==14570== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==14570== Command: ./Multithreading --leak-check=full
+==14570== 
+Thread Name: W2 ,  i = 0 , threadID = 2
+Thread Name: W2 ,  i = 1 , threadID = 2
+Thread Name: W2 ,  i = 2 , threadID = 2
+Thread Name: W2 ,  i = 3 , threadID = 2
+Thread Name: W3 ,  i = 0 , threadID = 3
+Thread Name: W2 ,  i = 4 , threadID = 2
+Thread Name: W1 ,  i = 0 , threadID = 1
+Thread Name: W2 ,  i = 5 , threadID = 2
+Thread Name: W1 ,  i = 1 , threadID = 1
+Thread Name: W2 ,  i = 6 , threadID = 2
+Thread Name: W2 ,  i = 7 , threadID = 2
+Thread Name: W4 ,  i = 0 , threadID = 4
+Thread Name: W2 ,  i = 8 , threadID = 2
+Thread Name: W2 ,  i = 9 , threadID = 2
+Thread Name: W2 ,  i = 10 , threadID = 2
+Success = 11
+Fail = 0
+Thread Name: W3 ,  i = 1 , threadID = 3
+Thread Name: W1 ,  i = 2 , threadID = 1
+Thread Name: W3 ,  i = 2 , threadID = 3
+Thread Name: W3 ,  i = 3 , threadID = 3
+Thread Name: W1 ,  i = 3 , threadID = 1
+Thread Name: W1 ,  i = 4 , threadID = 1
+Thread Name: W3 ,  i = 4 , threadID = 3
+Thread Name: W4 ,  i = 1 , threadID = 4
+Thread Name: W4 ,  i = 2 , threadID = 4
+Thread Name: W4 ,  i = 3 , threadID = 4
+Thread Name: W4 ,  i = 4 , threadID = 4
+Thread Name: W4 ,  i = 5 , threadID = 4
+Thread Name: W4 ,  i = 6 , threadID = 4
+Thread Name: W3 ,  i = 5 , threadID = 3
+Thread Name: W4 ,  i = 7 , threadID = 4
+Thread Name: W4 ,  i = 8 , threadID = 4
+Thread Name: W1 ,  i = 5 , threadID = 1
+Thread Name: W1 ,  i = 6 , threadID = 1
+Thread Name: W4 ,  i = 9 , threadID = 4
+Thread Name: W4 ,  i = 10 , threadID = 4
+Success = 11
+Fail = 0
+Thread Name: W3 ,  i = 6 , threadID = 3
+Thread Name: W3 ,  i = 7 , threadID = 3
+Thread Name: W3 ,  i = 8 , threadID = 3
+Thread Name: W1 ,  i = 7 , threadID = 1
+Thread Name: W1 ,  i = 8 , threadID = 1
+Thread Name: W1 ,  i = 9 , threadID = 1
+Thread Name: W1 ,  i = 10 , threadID = 1
+Success = 11
+Fail = 0
+Thread Name: W3 ,  i = 9 , threadID = 3
+Thread Name: W3 ,  i = 10 , threadID = 3
+Success = 11
+Fail = 0
+^C
+Worker-1 Success Count is : 11
+Worker-1 Fail Count is : 0
+Worker-2 Success Count is : 11
+Worker-2 Fail Count is : 0
+Worker-3 Success Count is : 11
+Worker-3 Fail Count is : 0
+Worker-4 Success Count is : 11
+Worker-4 Fail Count is : 0
+==14570== 
+==14570== HEAP SUMMARY:
+==14570==     in use at exit: 72,704 bytes in 1 blocks
+==14570==   total heap usage: 40 allocs, 39 frees, 76,960 bytes allocated
+==14570== 
+==14570== LEAK SUMMARY:
+==14570==    definitely lost: 0 bytes in 0 blocks
+==14570==    indirectly lost: 0 bytes in 0 blocks
+==14570==      possibly lost: 0 bytes in 0 blocks
+==14570==    still reachable: 72,704 bytes in 1 blocks
+==14570==         suppressed: 0 bytes in 0 blocks
+==14570== Rerun with --leak-check=full to see details of leaked memory
+==14570== 
+==14570== For counts of detected and suppressed errors, rerun with: -v
+==14570== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
